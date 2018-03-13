@@ -1,0 +1,964 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<title>标题</title>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<link type="text/css" rel="stylesheet" href="css/calendar.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+</head>
+<body>
+<div class="top">
+  <div id="logo">岭之南酒店管理系统</div>
+  <div class="select">
+    <div class="select-bar">
+      <p class="select-til">当前酒店</p>
+      <div class="select-show">广州豪悦酒店</div>
+      <span class="ico"></span>
+      <div class="select-slide">
+        <ul>
+          <!--此处输出li-->
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+        </ul>
+        <a href="#" class="more">更多酒店...</a> </div>
+    </div>
+    <input type="button" value="切&nbsp;换" class="select-btn" myId="yu"/>
+  </div>
+</div>
+<div class="wrap">
+  <div class="title-bar">
+    <div class="all-nav"> 全部功能菜单<span></span>
+      <ul class="all-nav-slide">
+        <li><a href="酒店管理.html">酒店管理</a></li>
+        <li><a href="订单处理.html">订单处理</a></li>
+        <li class="cur"><a href="#">房态房价</a></li>
+        <li><a href="OTA管理.html">OTA管理</a></li>
+        <li><a href="#">发票管理</a></li>
+        <li><a href="公告管理.html">公告管理<i></i></a></li>
+        <li><a href="#">微信开店</a></li>
+        <li><a href="账号管理.html">账号管理</a></li>
+        <li><a href="javascript:;">damo</a></li>
+      </ul>
+    </div>
+    <ul class="ota-toggle">
+      <li>艺龙酒店管理系统</li>
+      <li>同程酒店管理系统</li>
+      <li class="cur">去哪儿酒店管理系统</li>
+    </ul>
+  </div>
+  <div class="content">
+  		<div class="shin-bar calendar-block">
+    	<div class="shin-bar-left">
+        	<div class="shin-select-copy">
+            	筛选房型（全部）
+                <div class="shin-select-slide">
+                	<div class="check-tb">
+                    	<table width="100%">
+                        	<tr>
+                            	<td><label><input type="checkbox"/>标准单人房</label></td>
+                                <td><label><input type="checkbox"/>标准单人房预付特价</label></td>
+                            </tr>
+                            <tr>
+                            	<td><label><input type="checkbox"/>标准双人房</label></td>
+                                <td><label><input type="checkbox"/>标准双人房预付特价</label></td>
+                            </tr>
+                            <tr>
+                            	<td><label><input type="checkbox"/>商务大床房</label></td>
+                                <td><label><input type="checkbox"/>商务大床房预付特价</label></td>
+                            </tr>
+                            <tr>
+                            	<td><label><input type="checkbox"/>商务双床房</label></td>
+                                <td><label><input type="checkbox"/>商务双床房预付特价</label></td>
+                            </tr>
+                        </table>
+                    </div>
+					<div class="check-btn-bar">
+                    	<a href="javascript:;">确定</a>
+                        <label><input type="checkbox" />全选</label>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript:;" class="rooms-set-btn">批量修改房价房态</a>
+        </div>       
+        <div class="shin-bar-right">
+        
+        	<div class="calendar-hd">
+                <div class="calendar-left-btn"><span></span>前二周</div>
+                <div class="calendar-right-btn">后二周<span></span></div>
+                <p class="calendar-til">2015年9月</p>
+             </div>
+            <div class="calendar-bd">
+            	<table width="100%" cellpadding="0" cellspacing="0" class="calendar-tb">
+                	<tr class="calendar-date">
+                    	<!--js输出日历-->
+                    </tr>
+                </table>
+              </div>
+              
+        </div>
+      </div>
+      
+      <div class="rooms-sp-block">
+      	<table class="rooms-sp-tb" width="100%" border="1" bordercolor="dddddd" cellpadding="0" cellspacing="0">
+        	<tr class="x-pay">
+            	<th width="179px">
+                	<div class="type">
+                    	<p class="pay-type">现付</p>
+                        <p class="room-type">标准单人房</p>
+                    </div>
+                    <ul class="rooms-state-price">
+                    	<li>卖价</li>
+                        <li>佣金</li>
+                        <li>早餐</li>
+                    </ul>
+                </th>
+                <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="y-pay">
+            	<th width="179px">
+                	<div class="type">
+                    	<p class="pay-type">预付</p>
+                        <p class="room-type">标准单人房</p>
+                    </div>
+                    <ul class="rooms-state-price">
+                    	<li>卖价</li>
+                        <li>佣金</li>
+                        <li>早餐</li>
+                    </ul>
+                </th>
+                <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td class="no-room">
+                	<p class="room-state">无房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td class="stay-check">
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="x-pay">
+            	<th width="179px">
+                	<div class="type">
+                    	<p class="pay-type">现付</p>
+                        <p class="room-type">标准单人房</p>
+                    </div>
+                    <ul class="rooms-state-price">
+                    	<li>卖价</li>
+                        <li>佣金</li>
+                        <li>早餐</li>
+                    </ul>
+                </th>
+                <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td class="stay-check">
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td class="stay-check">
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td class="stay-check">
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td class="no-room">
+                	<p class="room-state">无房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="x-pay">
+            	<th width="179px">
+                	<div class="type">
+                    	<p class="pay-type">现付</p>
+                        <p class="room-type">标准单人房</p>
+                    </div>
+                    <ul class="rooms-state-price">
+                    	<li>卖价</li>
+                        <li>佣金</li>
+                        <li>早餐</li>
+                    </ul>
+                </th>
+                <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="x-pay">
+            	<th width="179px">
+                	<div class="type">
+                    	<p class="pay-type">现付</p>
+                        <p class="room-type">标准单人房</p>
+                    </div>
+                    <ul class="rooms-state-price">
+                    	<li>卖价</li>
+                        <li>佣金</li>
+                        <li>早餐</li>
+                    </ul>
+                </th>
+                <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+                 <td>
+                	<p class="room-state">有房</p>
+                    <p class="stay">待审核</p>
+                    <ul class="room-price">
+                    	<li class="p">300</li>
+                        <li class="c">30</li>
+                        <li class="b">2</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <div class="alert-box x-pay">
+        	<span class="close"></span>
+        	<p class="select-date"><!--js输出--></p>
+            <table class="select-room-state">
+            	<tr>
+                	<th>价格类型：</th>
+                    <td>前台现付</td>
+                </tr>
+                <tr>
+                	<th>早餐情况：</th>
+                    <td>
+                    <select>
+                    	<option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select></td>
+                </tr>
+                <tr>
+                	<th>价格模式：</th>
+                    <td>
+                        <label><input type="radio" name="price-type"/>低价+卖价</label>
+                        <label><input type="radio" name="price-type"/>低价+佣金/佣金率</label>
+                        <label><input type="radio" name="price-type"/>卖价+佣金/佣金率</label>
+                    </td>
+                </tr>
+            </table>
+            <table class="price-type-tb">
+            	<tr>
+                	<td class="text"><span>现付底价：</span><input type="text" /></td>
+                    <td class="text"><span>佣金：</span><input type="text" /></td>
+                </tr>
+                <tr>
+                	<td class="text"><span>现付卖价：</span><input type="text" /></td>
+                    <td class="text"><span>佣金率：</span><input type="text" /></td>
+                </tr>
+            </table>
+            <a href="javascript:;" class="price-change-btn">提交变价申请</a>
+        </div>
+        <div class="alert-box y-pay">
+        	<span class="close"></span>
+        	<p class="select-date"><!--js输出--></p>
+            <table class="select-room-state">
+            	<tr>
+                	<th>价格类型：</th>
+                    <td>现付酒店</td>
+                </tr>
+                <tr>
+                	<th>早餐情况：</th>
+                    <td>
+                    <select>
+                    	<option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select></td>
+                </tr>
+                <tr>
+                	<th>预付底价：</th>
+                    <td><input type="text" /></td>
+                </tr>
+            </table>
+            
+            <a href="javascript:;" class="price-change-btn">提交变价申请</a>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="shadow">
+  <div class="order-cnontent sp">
+  	<span class="close"></span>
+    <ul class="toggle-card">
+      <li class="cur sp">订单信息</li>
+    </ul>
+    <div class="order-details">
+      <div class="od-left">
+        <div class="info-tb-type">
+          <ul class="order-state">
+            <li>
+              <p class="marginR90">订单状态：<strong>待确认</strong></p>
+              <p>支付状态：<strong>待担保</strong></p>
+            </li>
+            <li>
+              <p class="order-mark type1">订单号：123456879</p>
+              <p class="order-mark type2">预付订单</p>
+              <p class="order-mark type3">今天入住</p>
+              <p class="order-mark type4">马上到店</p>
+            </li>
+          </ul>
+          <table>
+            <tbody>
+              <tr>
+                <th>客人姓名</th>
+                <td>廖媛  共1人</td>
+              </tr>
+              <tr>
+                <th>入离时间</th>
+                <td><span class="height-l">2015-07-13</span>至<span class="height-l">2015-07-13</span>共<span class="height-l">3</span>晚</td>
+              </tr>
+              <tr>
+                <th>预订房型</th>
+                <td>豪华双床房-限时抢购<span class="height-l">1</span>间</td>
+              </tr>
+              <tr>
+                <th>下单时间</th>
+                <td>14:00:00</td>
+              </tr>
+              <tr>
+                <th>注意</th>
+                <td>预订成功后不可取消，房间整晚保留，房价对客人保密。</td>
+              </tr>
+              <tr>
+                <th>付款方式</th>
+                <td>支付成功，共计<span class="height-l">1041</span>元</td>
+              </tr>
+              <tr>
+                <th>预订房价</th>
+                <td><table class="small-tb" border="1" bordercolor="#f0f0f0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <th><p class="first">周一</p>
+                      		<p>2015-06-17</p>
+                        </th>
+                      <th><p class="first">周一</p>
+                      		<p>2015-06-17</p></th>
+                      <th><p class="first">周一</p>
+                      		<p>2015-06-17</p></th>
+                    </tr>
+                    <tr>
+                      <td><span class="height-l">￥347</span></td>
+                      <td><span class="height-l">￥347</span></td>
+                      <td><span class="height-l">￥347</span></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="od-right">
+        <ul class="operate">
+          <li class="type1">确认订单</li>
+          <li class="type2">拒单</li>
+          <li class="type3">处理下一个<span></span></li>
+        </ul>
+        <div class="operate-explain">
+          <div class="oe-til">操作说明</div>
+          <div class="oe-con">
+            <p>确认房间：合适订单房态是否有误</p>
+            <p>安排房间：酒店确认已经安排房间，可以输入相应的酒店确认号等信息！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,286 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<title>标题</title>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+<div class="top">
+  <div id="logo">岭之南酒店管理系统</div>
+  <div class="select">
+    <div class="select-bar">
+      <p class="select-til">当前酒店</p>
+      <div class="select-show">广州豪悦酒店</div>
+      <span class="ico"></span>
+      <div class="select-slide">
+      	<ul><!--此处输出li-->
+      		<li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+        </ul>
+        <a href="#" class="more">更多酒店...</a>
+      </div>
+    </div>
+    <input type="button" value="切&nbsp;换" class="select-btn" myId="yu"/>
+  </div>
+</div>
+<div class="wrap">
+  <div class="title-bar">
+    <div class="all-nav"> 全部功能菜单<span></span>
+      <ul class="all-nav-slide">
+        <li><a href="酒店管理.html">酒店管理</a></li>
+        <li><a href="订单处理.html">订单处理</a></li>
+        <li><a href="房态房价.html">房态房价</a></li>
+        <li><a href="OTA管理.html">OTA管理</a></li>
+        <li><a href="#">发票管理</a></li>
+        <li><a href="公告管理.html">公告管理</a></li>
+         <li><a href="#">微信开店</a></li>
+        <li class="cur"><a href="账号管理.html">账号管理</a></li>
+      </ul>
+    </div>
+    <ul class="ota-toggle">
+      <li>艺龙酒店管理系统</li>
+      <li>同程酒店管理系统</li>
+      <li class="cur">去哪儿酒店管理系统</li>
+    </ul>
+  </div>
+  <div class="content">
+    
+    <div class="order-cnontent">
+      <ul class="toggle-card">
+        <li class="cur sp">账号信息</li>
+        <li>财务信息</li>
+        <li>子账号</li>
+        <li>修改密码</li>
+      </ul>
+      <div class="order-info">
+      	 <div class="order-card cur">
+         	<div class="info-tb-type">
+         	<table>
+            	<tr>
+                	<th>酒店账号名称</th>
+                    <td>锦江之星萧山国际机场店</td>
+                </tr>
+                <tr>
+                	<th>城市</th>
+                    <td>杭州</td>
+                </tr>
+                <tr>
+                	<th>酒店地址</th>
+                    <td>杭州萧山区红山大道55号</td>
+                </tr>
+                 <tr>
+                	<th>前台电话</th>
+                    <td><input type="text" value="0571-82256777" /></td>
+                </tr>
+                 <tr>
+                	<th>酒店传真</th>
+                    <td><input type="text" value="0571-82256777" /></td>
+                </tr>
+                 <tr>
+                	<th>负责人</th>
+                    <td><input type="text" value="周大福" /></td>
+                </tr>
+                 <tr>
+                	<th>负责人电话</th>
+                    <td><input type="text" value="0571-82256777" /></td>
+                </tr>
+                 <tr>
+                	<th>负责QQ</th>
+                    <td><input type="text" value="82256777" /></td>
+                </tr>
+            </table>
+            <input type="button" value="保存修改" class="info-tb-btn"/>
+         </div>
+         </div>
+         <div class="order-card">
+         	<div class="info-tb-type">
+         	<table>
+            	<tr>
+                	<th>开户行名称</th>
+                    <td>锦江之星萧山国际机场店</td>
+                </tr>
+                <tr>
+                	<th>卡户省市</th>
+                    <td>广东 广州</td>
+                </tr>
+                <tr>
+                	<th>账户名称</th>
+                    <td>广州豪悦酒店管理有限公司</td>
+                </tr>
+                 <tr>
+                	<th>银行账号</th>
+                    <td>12045645464545645</td>
+                </tr>
+                 <tr>
+                	<th>付款通知手机</th>
+                    <td>18515615121</td>
+                </tr>
+                 <tr>
+                	<th>财务姓名</th>
+                    <td>周大福</td>
+                </tr>
+                 <tr>
+                	<th>财务电话</th>
+                    <td><input type="text" value="18999564545,0571-82256777" /></td>
+                </tr>
+                 <tr>
+                	<th>财务QQ</th>
+                    <td><input type="text" value="82256777" /></td>
+                </tr>
+            </table>
+            <input type="button" value="保存修改" class="info-tb-btn"/>
+         </div>
+         </div>
+         
+        <div class="order-card">
+       		<p class="order-card-text"><input type="button" value="添加子账号" class="add-acc blue-btn">当前账号：广州豪悦酒店</p>
+          <table class="order-table" cellpadding="0" cellspacing="0" >
+            <thead>
+              <tr>
+                <th>子账号（13）</th>
+                <th>使用人</th>
+                <th>部门</th>
+                <th width="60%" class="text-left">权限</th>
+                <th><span class="check"></span>状态</th>
+                <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#">GZHRJDd9527</a></td>
+                <td>郑小芳</td>
+                <td>销售部</td>
+                <td class="text-left">订单管理、住店审核、房态维护、房价维护、财务结算、钟点房管理、OAT账号管理、OAT同步管理、酒店信息、用户管理、酒店促销、公告信息</td>
+                <td><span class="check cur"></span>启用</td>
+                <td><a href="javascript:;">修改</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">GZHRJDd9527</a></td>
+                <td>郑小芳</td>
+                <td>销售部</td>
+                <td class="text-left">订单管理、住店审核、房态维护、房价维护、财务结算、钟点房管理、OAT账号管理、OAT同步管理、酒店信息、用户管理、酒店促销、公告信息</td>
+                <td><span class="check cur"></span>启用</td>
+                <td><a href="javascript:;">修改</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">GZHRJDd9527</a></td>
+                <td>郑小芳</td>
+                <td>销售部</td>
+                <td class="text-left">订单管理、住店审核、房态维护、房价维护、财务结算、钟点房管理、OAT账号管理、OAT同步管理、酒店信息、用户管理、酒店促销、公告信息</td>
+                <td><span class="check cur"></span>启用</td>
+                <td><a href="javascript:;">修改</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">GZHRJDd9527</a></td>
+                <td>郑小芳</td>
+                <td>销售部</td>
+                <td class="text-left">订单管理、住店审核、房态维护、房价维护、财务结算、钟点房管理、OAT账号管理、OAT同步管理、酒店信息、用户管理、酒店促销、公告信息</td>
+                <td><span class="check cur"></span>启用</td>
+                <td><a href="javascript:;">修改</a></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="order-card">
+         	<div class="info-tb-type">
+         	<table>
+            	
+                 <tr>
+                	<th>原密码</th>
+                    <td><input type="text"/></td>
+                </tr>
+                 <tr>
+                	<th>新密码</th>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                	<th>确认新密码</th>
+                    <td><input type="text"/></td>
+                </tr>
+            </table>
+            <input type="button" value="保存修改" class="info-tb-btn"/>
+         </div>
+         </div>
+      
+      </div>
+    </div>
+  </div>
+  <div class="shadow">
+    
+    <div class="order-cnontent sp">
+    	<span class="close"></span>
+      <ul class="toggle-card">
+        <li class="cur sp">新建子账号</li>
+      </ul>
+      <div class="order-info">
+      	 
+         <div class="order-card cur">
+         	<div class="info-tb-type">
+         	<table>
+            	<tr>
+                	<th>账号名</th>
+                    <td><input type="text" value="广州豪悦酒店:hr005" /></td>
+                </tr>
+                <tr>
+                	<th>密码</th>
+                    <td><input type="text" value="123456" /></td>
+                </tr>
+                <tr>
+                	<th>使用人</th>
+                    <td><input type="text" value="廖媛" /></td>
+                </tr>
+                 <tr>
+                	<th>电话</th>
+                    <td><input type="text" value="18999564545" /></td>
+                </tr>
+                 <tr>
+                	<th>所属部门</th>
+                    <td><select class="form-type form-type2">
+                    	<option>销售部</option>
+                        <option>财务部</option>
+                        <option>行政部</option>
+                    </select></td>
+                </tr>
+                 <tr>
+                	<th>权限分配</th>
+                    <td><div class="check-block">
+                    	<label><input type="checkbox" />房价修改</label>
+                    	<label><input type="checkbox" />房价修改</label>
+                        <label><input type="checkbox" />房价修改</label>
+                        <label><input type="checkbox" />房价修改</label>
+                        <label><input type="checkbox" />房价修改</label>
+                        <label><input type="checkbox" />房价修改</label>
+                        <label><input type="checkbox" />房价修改</label>
+                    	<label><input type="checkbox" />房价修改</label>
+                        <label><input type="checkbox" />房价修改</label>
+                        <label><input type="checkbox" />房价修改</label>
+                        <label><input type="checkbox" />房价修改</label>
+                        <label><input type="checkbox" />房价修改</label>
+                    </div></td>
+                </tr>
+            </table>
+            <input type="button" value="确认创建" class="info-tb-btn"/>
+         </div>
+         </div>
+         
+        
+        
+      
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+</body>
+</html>

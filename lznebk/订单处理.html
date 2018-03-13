@@ -1,0 +1,305 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<title>标题</title>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+<div class="top">
+  <div id="logo">岭之南酒店管理系统</div>
+  <div class="select">
+    <div class="select-bar">
+      <p class="select-til">当前酒店</p>
+      <div class="select-show">广州豪悦酒店</div>
+      <span class="ico"></span>
+      <div class="select-slide">
+        <ul>
+          <!--此处输出li-->
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+          <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+        </ul>
+        <a href="#" class="more">更多酒店...</a> </div>
+    </div>
+    <input type="button" value="切&nbsp;换" class="select-btn" myId="yu"/>
+  </div>
+</div>
+<div class="wrap">
+  <div class="title-bar">
+    <div class="all-nav"> 全部功能菜单<span></span>
+      <ul class="all-nav-slide">
+        <li><a href="酒店管理.html">酒店管理</a></li>
+        <li class="cur"><a href="订单处理.html">订单处理</a></li>
+        <li><a href="房态房价.html">房态房价</a></li>
+        <li><a href="OTA管理.html">OTA管理</a></li>
+        <li><a href="#">发票管理</a></li>
+        <li><a href="公告管理.html">公告管理</a></li>
+        <li><a href="#">微信开店</a></li>
+        <li><a href="账号管理.html">账号管理</a></li>
+      </ul>
+    </div>
+    <ul class="ota-toggle">
+      <li>艺龙酒店管理系统</li>
+      <li>同程酒店管理系统</li>
+      <li class="cur">去哪儿酒店管理系统</li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="order-cnontent">
+      <ul class="toggle-card">
+        <li class="cur sp">待处理订单</li>
+        <li>今日入住</li>
+        <li>今日新单</li>
+        <li>全部订单</li>
+      </ul>
+      <div class="order-info">
+        <div class="order-card cur">
+          <p class="order-card-text"> <span class="care-ico"></span>单击帐期，查看对应订单，如有疑问，请及时联系岭之南财务专员，谢谢！</p>
+          <table class="order-table" cellpadding="0" cellspacing="0" >
+            <thead>
+              <tr>
+                <th>订单号</th>
+                <th>预订日期</th>
+                <th>客人姓名</th>
+                <th>入住房型</th>
+                <th>入住日期</th>
+                <th>退房日期</th>
+                <th>付款日期</th>
+                <th>房间数量</th>
+                <th>应付房费</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#" class="order-num">sw150719071727212</a></td>
+                <td>2015/7/19  7:17:27</td>
+                <td>彭素艳</td>
+                <td>豪华大床房</td>
+                <td>2015/07/19</td>
+                <td>2015/07/20</td>
+                <td>2015/07/20 11:39:35</td>
+                <td>1</td>
+                <td>198</td>
+              </tr>
+              <tr>
+                <td><a href="#" class="order-num">sw150719071727212</a></td>
+                <td>2015/7/19  7:17:27</td>
+                <td>彭素艳</td>
+                <td>豪华大床房</td>
+                <td>2015/07/19</td>
+                <td>2015/07/20</td>
+                <td>2015/07/20 11:39:35</td>
+                <td>1</td>
+                <td>198</td>
+              </tr>
+              <tr>
+                <td><a href="#" class="order-num">sw150719071727212</a></td>
+                <td>2015/7/19  7:17:27</td>
+                <td>彭素艳</td>
+                <td>豪华大床房</td>
+                <td>2015/07/19</td>
+                <td>2015/07/20</td>
+                <td>2015/07/20 11:39:35</td>
+                <td>1</td>
+                <td>198</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="order-card">
+          <p class="order-card-text">
+            <label>
+              <select class="form-type form-type2">
+                <option>待确认房间</option>
+                <option>已确认房间</option>
+                <option>已取消房间</option>
+              </select>
+            </label>
+            <label>
+              <select class="form-type form-type2">
+                <option>预订日期</option>
+                <option>入住日期</option>
+                <option>离店日期</option>
+              </select>
+            </label>
+            <label>
+              <input type="text" value="2015/03/11-2015/03/17"  class="form-type form-type1">
+            </label>
+            <label>
+              <input type="text" placeholder="请输入您要搜索的客人"  class="form-type form-type1">
+            </label>
+            <input type="button" value="查询" class="blue-btn order-search">
+          </p>
+          <table class="order-table" cellpadding="0" cellspacing="0" >
+            <thead>
+              <tr>
+                <th>订单号</th>
+                <th>预订日期</th>
+                <th>客人姓名</th>
+                <th>入住房型</th>
+                <th>入住日期</th>
+                <th>退房日期</th>
+                <th>付款日期</th>
+                <th>房间数量</th>
+                <th>应付房费</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#" class="order-num">sw150719071727212</a></td>
+                <td>2015/7/19  7:17:27</td>
+                <td>彭素艳</td>
+                <td>豪华大床房</td>
+                <td>2015/07/19</td>
+                <td>2015/07/20</td>
+                <td>2015/07/20 11:39:35</td>
+                <td>1</td>
+                <td>198</td>
+              </tr>
+              <tr>
+                <td><a href="#" class="order-num">sw150719071727212</a></td>
+                <td>2015/7/19  7:17:27</td>
+                <td>彭素艳</td>
+                <td>豪华大床房</td>
+                <td>2015/07/19</td>
+                <td>2015/07/20</td>
+                <td>2015/07/20 11:39:35</td>
+                <td>1</td>
+                <td>198</td>
+              </tr>
+              <tr>
+                <td><a href="#" class="order-num">sw150719071727212</a></td>
+                <td>2015/7/19  7:17:27</td>
+                <td>彭素艳</td>
+                <td>豪华大床房</td>
+                <td>2015/07/19</td>
+                <td>2015/07/20</td>
+                <td>2015/07/20 11:39:35</td>
+                <td>1</td>
+                <td>198</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="right-foot">
+          <div class="total-money"> <span class="money-ico"></span>
+            <p>总计金额：<span class="money-num">1450646</span></p>
+          </div>
+          <div class="page-num">
+            <ul class="page-list">
+              <li><a href="#" class="sp">《上一页</a></li>
+              <li><a href="#" class="cur">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li class="ellipsis">...</li>
+              <li><a href="#" class="sp">下一页》</a></li>
+            </ul>
+            <span class="font-explain">共10页</span> <span class="font-explain">跳到第</span>
+            <div class="turn-num">
+              <input type="text" value="1" class="turn-num-t">
+              <input type="button" value="GO" class="turn-num-b">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="shadow">
+  <div class="order-cnontent sp">
+  	<span class="close"></span>
+    <ul class="toggle-card">
+      <li class="cur sp">订单信息</li>
+    </ul>
+    <div class="order-details">
+      <div class="od-left">
+        <div class="info-tb-type">
+          <ul class="order-state">
+            <li>
+              <p class="marginR90">订单状态：<strong>待确认</strong></p>
+              <p>支付状态：<strong>待担保</strong></p>
+            </li>
+            <li>
+              <p class="order-mark type1">订单号：123456879</p>
+              <p class="order-mark type2">预付订单</p>
+              <p class="order-mark type3">今天入住</p>
+              <p class="order-mark type4">马上到店</p>
+            </li>
+          </ul>
+          <table>
+            <tbody>
+              <tr>
+                <th>客人姓名</th>
+                <td>廖媛  共1人</td>
+              </tr>
+              <tr>
+                <th>入离时间</th>
+                <td><span class="height-l">2015-07-13</span>至<span class="height-l">2015-07-13</span>共<span class="height-l">3</span>晚</td>
+              </tr>
+              <tr>
+                <th>预订房型</th>
+                <td>豪华双床房-限时抢购<span class="height-l">1</span>间</td>
+              </tr>
+              <tr>
+                <th>下单时间</th>
+                <td>14:00:00</td>
+              </tr>
+              <tr>
+                <th>注意</th>
+                <td>预订成功后不可取消，房间整晚保留，房价对客人保密。</td>
+              </tr>
+              <tr>
+                <th>付款方式</th>
+                <td>支付成功，共计<span class="height-l">1041</span>元</td>
+              </tr>
+              <tr>
+                <th>预订房价</th>
+                <td><table class="small-tb" border="1" bordercolor="#f0f0f0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <th><p class="first">周一</p>
+                      		<p>2015-06-17</p>
+                        </th>
+                      <th><p class="first">周一</p>
+                      		<p>2015-06-17</p></th>
+                      <th><p class="first">周一</p>
+                      		<p>2015-06-17</p></th>
+                    </tr>
+                    <tr>
+                      <td><span class="height-l">￥347</span></td>
+                      <td><span class="height-l">￥347</span></td>
+                      <td><span class="height-l">￥347</span></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="od-right">
+        <ul class="operate">
+          <li class="type1">确认订单</li>
+          <li class="type2">拒单</li>
+          <li class="type3">处理下一个<span></span></li>
+        </ul>
+        <div class="operate-explain">
+          <div class="oe-til">操作说明</div>
+          <div class="oe-con">
+            <p>确认房间：合适订单房态是否有误</p>
+            <p>安排房间：酒店确认已经安排房间，可以输入相应的酒店确认号等信息！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

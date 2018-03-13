@@ -1,0 +1,32 @@
+.calendar-tb{
+	border-top:1px solid #6db2f7;
+	}
+.calendar-date>td{
+	color:#fff;
+	height:59px;
+	background:#499ff5;
+	text-align:center;
+	font:16px/28px microsoft yahei,simhei;
+	border-left:1px solid #6db2f7;
+	}
+
+.calendar-date>td.holiday{
+	background:#3293f3;}
+	.calendar-date>td.hover{
+	background:#ff6406;}
+.select-room-state th{
+	font:bold 12px simsun,simhei;
+	height:40px;
+	color:#666;}
+.select-room-state td{
+	font:12px simsun,simhei;
+	}
+.select-room-state select{
+	width:98px;
+	height:28px;
+	border:1px solid #ccc;}
+.select-room-state label{
+	margin-right:20px;}
+.select-room-state label input{
+	vertical-align:sub;
+	margin-right:5px;}

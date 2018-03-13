@@ -1,0 +1,163 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<title>标题</title>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+<div class="top">
+  <div id="logo">岭之南酒店管理系统</div>
+  <div class="select">
+    <div class="select-bar">
+      <p class="select-til">当前酒店</p>
+      <div class="select-show">广州豪悦酒店</div><span class="ico"></span>
+      <div class="select-slide">
+      	<ul><!--此处输出li-->
+      		<li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+            <li><a href="#">三亚亚龙湾吉瑞精品酒店</a></li>
+        </ul>
+        <a href="#" class="more">更多酒店...</a>
+      </div>
+    </div>
+    <input type="button" value="切&nbsp;换" class="select-btn" myId="yu"/>
+  </div>
+</div>
+<div class="wrap">
+  <div class="title-bar">
+    <div class="all-nav"> 全部功能菜单<span></span>
+      <ul class="all-nav-slide">
+        <li><a href="酒店管理.html">酒店管理</a></li>
+        <li><a href="订单处理.html">订单处理</a></li>
+        <li><a href="房态房价.html">房态房价</a></li>
+        <li><a href="OTA管理.html">OTA管理</a></li>
+        <li><a href="#">发票管理</a></li>
+        <li class="cur"><a href="公告管理.html">公告管理</a></li>
+         <li><a href="#">微信开店</a></li>
+        <li><a href="账号管理.html">账号管理</a></li>
+      </ul>
+    </div>
+    <ul class="ota-toggle">
+      <li>艺龙酒店管理系统</li>
+      <li>同程酒店管理系统</li>
+      <li class="cur">去哪儿酒店管理系统</li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="order-cnontent">
+      <ul class="toggle-card">
+        <li class="cur sp">公告管理</li>
+      </ul>
+      <div class="order-info">
+        <div class="order-card cur">
+          <p class="order-card-text"> 
+            <!--<div class="select-copy">
+                	<p class="sc-show">全部</p>
+                    <ul class="sc-slide">
+                    	<li>商务房</li>
+                        <li>双人房</li>
+                        <li>豪华房</li>
+                    </ul>
+                </div>-->
+            <label>
+              <select class="form-type form-type1">
+                <option>紧急公告</option>
+                <option>重要公告</option>
+                <option>功能上线</option>
+              </select>
+            </label>
+            <label> <span>标题</span>
+              <input type="text" value="12345678@qq.com"  class="form-type form-type1">
+            </label>
+            <label> <span>发布日期</span>
+              <select class="form-type form-type1">
+                <option>7月</option>
+                <option>8月</option>
+                <option>9月</option>
+                <option>10月</option>
+              </select>
+            </label>
+          </p>
+          <table class="order-table" cellpadding="0" cellspacing="0" >
+            <thead>
+              <tr>
+                <th>公告类型</th>
+                <th class="text-left">标题</th>
+                <th>发布时间</th>
+                <th>有无附件</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>重要公告</td>
+                <td class="text-left"><a href="#">岭之南酒店管理系统优化</a></td>
+                <td>2015/07/19 18:59:18</td>
+                <td>有</td>
+                <td><a href="javascript:;">查看</a></td>
+              </tr>
+              <tr>
+                <td>功能上线</td>
+                <td class="text-left"><a href="#">岭之南酒店管理系统优化</a></td>
+                <td>2015/07/19 18:59:18</td>
+                <td>有</td>
+                <td><a href="javascript:;">查看</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="right-foot">
+          <div class="total-money"> <span class="money-ico"></span>
+            <p>总计金额：<span class="money-num">1450646</span></p>
+          </div>
+          <div class="page-num">
+            <ul class="page-list">
+              <li><a href="#" class="sp">《上一页</a></li>
+              <li><a href="#" class="cur">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li class="ellipsis">...</li>
+              <li><a href="#" class="sp">下一页》</a></li>
+            </ul>
+            <span class="font-explain">共10页</span> <span class="font-explain">跳到第</span>
+            <div class="turn-num">
+              <input type="text" value="1" class="turn-num-t">
+              <input type="button" value="GO" class="turn-num-b">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="order-cnontent">
+      <div class="content-details-hd"><a href="javascript:;"><< 返回列表</a></div>
+      <div class="content-details-bd">
+      		<div class="h-group">
+      			<h3>酒店优惠增加门票打包功能说明</h3>
+            	<h4>[功能上线公告]&nbsp;&nbsp;发布时间&nbsp;2015-07-28 11:57:39</h4>
+            </div>
+            <div class="content-details-text">
+            	尊敬的各位酒店合作伙伴：<br>
+                &nbsp;&nbsp;您好，通过对代理商到店无房投诉分析发现：当日订单的到店无房投诉，多数是无线端下单且用户与酒店距离在10KM以内。为提升代理商的可预订率、降低损失，同时提高用户体验，系统上线了“马上到店”功能，对标识“马上到店”的订单，建议优先处理。功能详述，请见附件
+            </div>
+            <div class="content-details-foot">
+            	<p>附件列表</p>
+                <a href="#">马上到店订单代理商公告.docx</a>
+                <a href="#">马上到店订单代理商公告222.docx</a>
+                <a href="#">马上到店订单代理商公告333.docx</a>
+                <a href="#">马上到店订单代理商公告444.docx</a>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

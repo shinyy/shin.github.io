@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML>
+<html>
+		<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="keywords" content="关键词1,关键词2,关键词3" />
+		<meta name="description" content="对网站的描述" />
+		<title>标题</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="css/login.css"/>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/js.js"></script>
+		<script type="text/javascript">
+			$(document).ready(
+				function(){
+					//克隆一个节点，放在最后当猫腻
+					$("#tupian ul li:first").clone().appendTo($("#tupian ul"));
+					//$("#tupian ul li:first")
+					var jiangeshijian = 3000; //  ← 请设置这个值，表示自动轮播的间隔时间
+
+					//信号量，指示当前图片编号
+					var nowshowpic = 0; 
+
+
+					//得到所有图片的数量
+					var imgamount = $("#tupian ul li").length - 1;
+					//控制小圆点，和图片数量一样多
+					for(var i = 0 ; i < imgamount ; i++){
+						$("#xiaoyuandian ul").append("<li></li>");
+					}
+					//让第一个小圆点变蓝
+					shezhixiaoyuandian(0);
+
+					//每2秒种，模拟点击一次右按钮
+					var mytimer = null;
+					zidong();
+					function zidong(){
+						window.clearInterval(mytimer);
+						mytimer = window.setInterval(
+							function(){
+								$("#anniu .you").trigger("click");
+							}
+						,jiangeshijian);
+					}
+
+					//鼠标进入，图片停止轮播
+					$("#lunbo,#anniu").mouseenter(
+						function(){
+							window.clearInterval(mytimer);
+						}
+					);
+
+					//鼠标离开，图片继续轮播
+					$("#lunbo,#anniu").mouseleave(
+						function(){
+							zidong();
+						}
+					);
+
+					//给右边按钮添加监听
+					$("#anniu .you").click(
+						function(){
+							if(!$("#tupian ul").is(":animated")){
+								if(nowshowpic < imgamount - 1){
+									nowshowpic ++;
+									huantu(nowshowpic);
+								}else{
+									nowshowpic = 0;
+									huantu2(imgamount);
+								}
+								shezhixiaoyuandian(nowshowpic);
+							}
+						}
+					);
+
+					//给左边按钮添加监听
+					$("#anniu .zuo").click(
+						function(){
+							if(!$("#tupian ul").is(":animated")){
+								if(nowshowpic > 0){
+									nowshowpic --
+								}else{
+									$("#tupian ul").css("left",-1*imgamount*$("#tupian ul li img").width());
+									nowshowpic = imgamount - 1;
+								}
+								
+								huantu(nowshowpic);
+								shezhixiaoyuandian(nowshowpic);
+							}
+						}
+					);
+
+					//给所有小圆点添加监听
+					$("#xiaoyuandian ul li").click(
+						function(){
+							nowshowpic = $(this).index();
+							//huantu(nowshowpic);
+							$("#tupian ul").css("left", -1 * $("#tupian ul li img").width() * nowshowpic);
+							shezhixiaoyuandian(nowshowpic);
+						}
+					);
+
+					//让第num个li有cur，其余没cur
+					function shezhixiaoyuandian(num){
+						$("#xiaoyuandian ul li").eq(num).addClass("cur").siblings().removeClass("cur");
+					}
+
+					//核心函数，跑火车的执行者。
+					function huantu(num){
+						$("#tupian ul").animate(
+							{
+								"left": -1 * $("#tupian ul li img").width() * num
+							}
+							,600
+						);
+					}
+					function huantu2(num){
+						$("#tupian ul").animate(
+							{
+								"left": -1 * $("#tupian ul li img").width() * num
+							}
+							,600,function(){
+								$("#tupian ul").css("left",0);
+							}
+						);
+					}
+				}
+			);
+			
+		</script>
+		</head>
+		<body>
+<div class="login-top">
+          <div class="login-top-inner">
+    <div id="login-logo">岭之南酒店管理系统</div>
+  </div>
+        </div>
+<div class="banner-box">
+          <div id="lunbo">
+    <div id="tupian" class="tupian">
+              <ul>
+        <li><a href="#"><img src="images/login_05.jpg" /></a></li>
+        <li><a href="#"><img src="images/login (1).jpg" /></a></li>
+        <li><a href="#"><img src="images/login (2).jpg" /></a></li>
+        <li><a href="#"><img src="images/login (3).jpg" /></a></li>
+        <li><a href="#"><img src="images/login (4).jpg" /></a></li>
+      </ul>
+            </div>
+    <div id="anniu" class="anniu"> <a class="zuo"></a> <a class="you"></a> </div>
+    <div id="xiaoyuandian" class="xiaoyuandian">
+              <ul>
+      </ul>
+            </div>
+  </div>
+          <div class="login-inner">
+    <div class="login-box">
+              <h3>登录</h3>
+              <table>
+        <tr>
+                  <th>账户</th>
+                  <td><input type="text" /></td>
+                </tr>
+        <tr>
+                  <th>密码</th>
+                  <td><input type="text" /></td>
+                </tr>
+        <tr>
+                  <th>&nbsp;</th>
+                  <td><div class="login-row">
+                      <label>
+                      <input type="checkbox" />
+                      记住密码30天</label>
+                      <a href="#">忘记密码</a> </div>
+            <input type="button" value="登录" class="login-btn" onclick="location.href='酒店管理.html'"/></td>
+                </tr>
+      </table>
+              <a href="#" class="other">注册请联系签约经理</a> </div>
+  </div>
+        </div>
+<!--<div class="news">
+          <div class="news-box type1">
+    <p class="news-til">最新公告</p>
+    <ul class="news-con">
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+            </ul>
+  </div>
+          <div class="news-box type2">
+    <p class="news-til">最新公告</p>
+    <ul class="news-con">
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+            </ul>
+  </div>
+          <div class="news-box type2">
+    <p class="news-til">最新公告</p>
+    <ul class="news-con">
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+              <li><a href="#">如何进行订单处理</a></li>
+            </ul>
+  </div>
+        </div>-->
+</body>
+</html>

@@ -1,0 +1,33 @@
+.jd-list{
+  width: 880px;
+}
+.spcial-menu{
+	width: 960px;
+}
+.go-where{
+	width: 880px;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+.go-where>ul>li>div{
+	float: none;
+	margin: 0 auto;
+}
+.go-where dl{
+	float: none;
+	margin: 0;
+	text-align: center
+}
+.go-where dl dd {
+	margin: 0 auto;
+}
+.about{
+	margin: 0;
+}
+.about li{
+	width: 77px;
+}
+ .top-inner{
+width: auto;
+}
