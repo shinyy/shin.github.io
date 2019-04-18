@@ -48,6 +48,7 @@ body{
         margin-bottom:.2rem;
         font-weight:bold;
         background: url('../images/img_activity_detail_title@2x.png') no-repeat center;
+        background-size:100%;
     }
     .inner .li .zone a{
         width:2.08rem;
